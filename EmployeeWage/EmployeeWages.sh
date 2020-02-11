@@ -1,5 +1,11 @@
 #!/bin/bash/ -x
 echo Welcome to Employee Wage Computation Program on Master Branch
+count=0
+workDay=20
+extra=0
+
+while(($workDay!=0))
+do
 x=$(($RANDOM%2))
 echo $x
 case $x in
@@ -11,6 +17,12 @@ count=$(($count+1))
 ;;
 0) echo  absent
 ;;
+
 esac
 echo $wage
-echo $extra
+workDay=$(($workDay-1))
+done
+
+echo total income : $wage
+echo total no of day he present: $count
+echo total extra hour that he works :$extra
