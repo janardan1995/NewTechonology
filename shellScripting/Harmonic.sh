@@ -1,10 +1,12 @@
-echo enter a no to know the harmonic series
-read h.0
-sum=0
-for ((i=1.0;i<=h;i++))
+echo enter a no
+read x
+no=$x;
+i=0
+while(($x>=0))
 do
-s=$((1.0/$i))
-sum=$(($sum.0+$s.0)) 
-echo $s.0
+sum=$[2**$i]
+echo 2^$i=$sum
+i=$(($i+1))
+x=$(($x-1))
+echo ...................................
 done
-echo $sum.0

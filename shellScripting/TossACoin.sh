@@ -1,17 +1,20 @@
+
 headCount=0
 tailCount=0
 echo "enter how many times you wanna toss the coin"
 read t
 toss=$t
 
-while [ $toss -gt 0 ]
+while [ $toss -gt 0 ]     #or while(($toss>0))
 do
 a=$(($RANDOM%2))
 echo "....$a"
-if [ $a -eq 1 ]
+if [ $a -eq 1 ]     #or if(($a==1))
 then
          headCount=$(($headCount+1))
-else
+fi
+if [ $a -eq 0 ]
+then
          tailCount=$(($tailCount+1))
 fi
 toss=$(($toss-1))
