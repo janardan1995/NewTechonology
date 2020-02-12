@@ -1,28 +1,13 @@
-#!/bin/bash/ -x
-echo Welcome to Employee Wage Computation Program on Master Branch
+echo wages for a month
+# if  calculiting 20 working day
 count=0
 workDay=20
 extra=0
 
 while(($workDay!=0))
 do
-x=$(($RANDOM%2))
-echo $x
-case $x in
-1) echo how many extra hour that he works
-read e
-extra=$(($extra+$e))
-wage=$(($wage+$(($((20*8))+$(($e*20))))))
-count=$(($count+1))
-;;
-0) echo  absent
-;;
-
-esac
-echo $wage
+wage=$(($wage+$((20*8))))
 workDay=$(($workDay-1))
 done
+echo total wages : $wage
 
-echo total income : $wage
-echo total no of day he present: $count
-echo total extra hour that he works :$extra
