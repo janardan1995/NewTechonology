@@ -1,5 +1,12 @@
 #!/bin/bash/ -x
 echo "Welcome to Employee Wage Computation Program"
+count=0
+workDay=20
+extra=0
+
+while(($workDay!=0))
+do
+
 x=$(($RANDOM%2))
 echo $x
 
@@ -10,19 +17,23 @@ echo for part time press 2
 read y
 case $y in
 
-1) echo he wanna work full time
-wage=$((20*8))
-echo his full time wages is : $wage
+
+1) echo "he wanna work full time"
+        FullTimewage=$(($FullTimewage+$((20*8))))
 ;;
 
-2) echo he wanna work part time
-wage=$((20*4))
-echo his part time wages is : $wage
+2) echo "he wanna work part time for 4 hours per day"
+       PartTimewage=$(($PartTimewage+$((20*4))))
 ;;
 
 *) echo invalide input
 esac
-echo just checking
+else
+echo he is absent
 fi
-#testcase
+workDay=$(($workDay-1))
+done
+
+echo full time wage :$FullTimewage
+echo PartTimewage :$PartTimewage
 
