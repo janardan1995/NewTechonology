@@ -1,5 +1,8 @@
-
-# if  calculiting 20 working day and total hour that employee works less then 100
+totalworkHour()
+{
+int=$1
+echo wages for a month
+# if  calculiting 20 working day
 count=1
 workDay=20
 extra=0
@@ -9,9 +12,11 @@ do
 echo $count
 wage=$(($wage+$((20*8))))
 workDay=$(($workDay-1))
-hour=$(($hour+8))
+hour=$(($hour+$1))
 count=$(($count+1))
 done
 echo total wages : $wage
 echo $hour
+}
 
+totalworkHour 4
