@@ -1,16 +1,19 @@
-#!/bin/bash/ -x
-echo Welcome to Employee Wage Computation Program on Master Branch
-x=$(($RANDOM%2))
-echo $x
+
+echo for full time press 1
+echo for part time press 2
 case $x in
-1) echo how many extra hour that he works
-read e
-extra=$(($extra+$e))
-wage=$(($wage+$(($((20*8))+$(($e*20))))))
-count=$(($count+1))
+
+1) echo he wanna work full time
+wage=$((20*8))
+echo his full time wages is : $wage
 ;;
-0) echo  absent
+
+2) echo he wanna work part time
+wage=$((20*4))
+echo his part time wages is : $wage
 ;;
+
+*) echo invalide input
 esac
-echo $wage
-echo $extra
+
+
