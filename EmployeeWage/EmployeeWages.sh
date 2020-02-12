@@ -1,6 +1,5 @@
-#!/bin/sh -x
-echo wages for a month
-# if  calculiting 20 working day
+
+# if  calculiting 20 working day and total hour that employee works less then 100
 count=1
 workDay=20
 extra=0
@@ -15,4 +14,4 @@ count=$(($count+1))
 done
 echo total wages : $wage
 echo $hour
-echo perfect!!
+
