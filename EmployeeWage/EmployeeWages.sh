@@ -1,5 +1,3 @@
-
-
 #!/bin/bash/ -x
 echo "Welcome to Employee Wage Computation Program"
 x=$(($RANDOM%2))
@@ -24,11 +22,7 @@ echo his part time wages is : $wage
 
 *) echo invalide input
 esac
-
-
-else
-echo employee is absent
+echo just checking
 fi
-
-
+#testcase
 
