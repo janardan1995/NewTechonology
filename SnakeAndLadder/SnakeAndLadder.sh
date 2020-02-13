@@ -1,0 +1,2 @@
+#!/bin/bash/ -x
+echo WELCOM TO SNAKE AND LADDER PROGRAM
