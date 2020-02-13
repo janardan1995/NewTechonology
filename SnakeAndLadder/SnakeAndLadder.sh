@@ -1,2 +1,2 @@
-#!/bin/bash/ -x
-echo WELCOM TO SNAKE AND LADDER PROGRAM
+echo single player playeing the game and his starting position is 0
+CountUser=0
