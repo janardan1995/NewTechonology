@@ -1,0 +1,43 @@
+
+0
+0
+160
+0
+0
+0
+0
+160
+80
+0
+0
+160
+0
+80
+160
+0
+0
+80
+160
+80
+total wages is 4320
+0 for day 1
+160 for day 1
+0 for day 1
+160 for day 1
+0 for day 1
+160 for day 1
+0 for day 1
+0 for day 1
+0 for day 1
+80 for day 1
+0 for day 1
+0 for day 1
+0 for day 1
+0 for day 1
+80 for day 1
+160 for day 1
+0 for day 1
+80 for day 1
+0 for day 1
+0 for day 1
+total wages is 4080
