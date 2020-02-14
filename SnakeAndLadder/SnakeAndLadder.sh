@@ -7,3 +7,23 @@ random(){
  x=$(($(($RANDOM%6))+1))
 return $x
 }
+echo press 1 for No play
+echo press 2 for move forward
+echo press 3 for move backward
+read move
+random
+die=$?
+case $move in 
+
+1) echo $CountUser
+   ;;
+
+2) CountUser=$(($CountUser+$die)) 
+   echo $CountUser
+   ;;
+
+3) CountUser=$(($CountUser-$die)) 
+   echo $CountUser
+   ;;
+esac
+
