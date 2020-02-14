@@ -26,4 +26,3 @@ case $move in
    echo $CountUser
    ;;
 esac
-
