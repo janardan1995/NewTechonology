@@ -1,3 +1,4 @@
+  
 #!/bin/bash/ -x
 echo WECOME TO SNAKE AND LADDER
 echo single player playeing the game and his starting position is 0
@@ -10,16 +11,7 @@ return $x
 }
 
 
-#THIS is for checking an option randomly
-move=$(($RANDOM%3+1))
-
-echo press 1 for No play
-echo press 2 for move forward
-echo press 3 for move backward
-
-random
-die=$?
-case $move in 
+###########
 CountUser=0
 Ladder(){
 echo
@@ -27,10 +19,10 @@ echo
 random
  a=$?
 echo die value is $a
-
+#echo enyter into the case
    case $a in
      1) CountUser=$(($CountUser+1))
-	echo 
+	echo
         return $CountUser
         ;;
 
@@ -39,26 +31,26 @@ echo die value is $a
          return $CountUser
 	else
 	CountUser=$(($CountUser+2))
-	echo 
+	echo
        return $CountUser
 	fi
         ;;
 
      3) if [ $CountUser -eq 99 ] || [ $CountUser -eq 98 ]
 	then
-	echo 
+	echo
 	return $CountUser
 	else
 	CountUser=$(($CountUser+3))
-	echo 
+	echo
         return $CountUser
 	fi
         ;;
 
      4) if [ $CountUser -eq 99 ] || [ $CountUser -eq 98 ] || [ $CountUser -eq 97 ]
 	then
-	echo 
-	return 
+	echo
+	return
 	else
 	CountUser=$(($CountUser+4))
 	echo
@@ -83,7 +75,7 @@ echo die value is $a
 	return $CountUser
 	else
 	CountUser=$(($CountUser+6))
-	echo $CountUser
+	echo
         return $CountUser
 	fi
         ;;
@@ -176,7 +168,8 @@ echo die value is $a
 #_________________________________
 
 #main function
-
+#this count variable is for no of total time die was played
+count=0
 while(($CountUser!=100))
 do
 echo press 1 for No play
@@ -186,30 +179,20 @@ read move
 
 
 case $move in
-while (($CountUser!=100))
-do
-random
 
-
-die=$?
-echo "die : $die"
-move=$(($(($RANDOM%3))+1))
-case $move in
-1) echo ..........$CountUser
+1) echo
+   echo $CountUser
    ;;
 
 2) Ladder $CountUser
-  echo .. $?
+  echo
   echo $CountUser
    ;;
 
 3) Snake $CountUser
    echo $CountUser
-
    ;;
-
- *) echo error
 esac
+count=$(($count+1))
 done
-
-done
+echo total number of times the dice was played to win the game is : $count
