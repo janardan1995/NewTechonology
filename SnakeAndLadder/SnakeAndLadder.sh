@@ -10,20 +10,27 @@ return $x
 echo press 1 for No play
 echo press 2 for move forward
 echo press 3 for move backward
-read move
+
+
+while (($CountUser!=100))
+do
 random
+
 die=$?
-case $move in 
-
-1) echo $CountUser
+echo "die : $die"
+move=$(($(($RANDOM%3))+1))
+case $move in
+1) echo ..........$CountUser
    ;;
 
-2) CountUser=$(($CountUser+$die)) 
-   echo $CountUser
+2)  CountUser=$(($CountUser+$die))
+   echo .......... $CountUser
    ;;
 
-3) CountUser=$(($CountUser-$die)) 
-   echo $CountUser
+3) CountUser=$(($(($CountUser))-$(($die))))
+   echo .........$CountUser
    ;;
+
+ *) echo error
 esac
-
+done
