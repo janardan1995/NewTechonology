@@ -1,366 +1,256 @@
 #!/bin/bash/ -x
 echo WECOME TO SNAKE AND LADDER
 echo single player playeing the game and his starting position is 0
+
 #random function for randomly generated number
+#.............................................................................................................>
 random(){
  x=$(($(($RANDOM%6))+1))
 return $x
 }
-###########
-CountUser=0
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 Ladder(){
-echo
+# VARIBLE IS USED FOR STORING THE PARAMETER
+Count=$1
+
 # random function calling for rolling die
 random
- a=$?
-echo die value is $a
-#echo enyter into the case
+a=$?
+echo die value is : $a
+
+#enter into the case
    case $a in
-     1) CountUser=$(($CountUser+1))
-	return $CountUser
+     1) Count=$(($Count+1))
+	return $Count
         ;;
 
-     2) if (($CountUser==99))
+     2) if (($Count==99))
 	then
-         return $CountUser
+        return $Count
 	else
-	CountUser=$(($CountUser+2))
-       return $CountUser
+	Count=$(($Count+2))
+        return $Count
 	fi
         ;;
 
-     3) if [ $CountUser -eq 99 ] || [ $CountUser -eq 98 ]
+     3) if [ $Count -eq 99 ] || [ $Count -eq 98 ]
 	then
-	return $CountUser
+	return $Count
 	else
-	CountUser=$(($CountUser+3))
-        return $CountUser
+	Count=$(($Count+3))
+        return $Count
 	fi
         ;;
 
-     4) if [ $CountUser -eq 99 ] || [ $CountUser -eq 98 ] || [ $CountUser -eq 97 ]
+     4) if [ $Count -eq 99 ] || [ $Count -eq 98 ] || [ $Count -eq 97 ]
 	then
 	return
 	else
-	CountUser=$(($CountUser+4))
-        return $CountUser
+	Count=$(($Count+4))
+        return $Count
 	fi
         ;;
 
-      5)if [ $CountUser -eq 99 ] || [ $CountUser -eq 98 ] || [ $CountUser -eq 97 ] || [ $CountUser -eq 96 ]
+      5)if [ $Count -eq 99 ] || [ $Count -eq 98 ] || [ $Count -eq 97 ] || [ $Count -eq 96 ]
 	then
-	return $CountUser
+	return $Count
 	else
-	CountUser=$(($CountUser+5))
-        return $CountUser
+	Count=$(($Count+5))
+        return $Count
 	fi
         ;;
 
-      6)if [ $CountUser -eq 99 ] || [ $CountUser -eq 98 ] || [ $CountUser -eq 97 ] || [ $CountUser -eq 96 ] || [ $CountUser -eq 95 ]
+      6)if [ $Count -eq 99 ] || [ $Count -eq 98 ] || [ $Count -eq 97 ] || [ $Count -eq 96 ] || [ $Count -eq 95 ]
 	then
-	return $CountUser
+	return $Count
 	else
-	CountUser=$(($CountUser+6))
-        return $CountUser
+	Count=$(($Count+6))
+        return $Count
 	fi
         ;;
 
-   *) echo error
+      *) echo error
    esac
 }
 #----------------------------------------------------------------------------------------
-Ladder2(){
-echo
-# random function calling for rolling die
-random
- a=$?
-echo die value is $a
-#echo enyter into the case
-   case $a in
-     1) CountUser2=$(($CountUser2+1))
-	return $CountUser2
-        ;;
 
-     2) if (($CountUser2==99))
-	then
-         return $CountUser2
-	else
-	CountUser2=$(($CountUser2+2))
-       return $CountUser2
-	fi
-        ;;
-
-     3) if [ $CountUser2 -eq 99 ] || [ $CountUser2 -eq 98 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2+3))
-        return $CountUser2
-	fi
-        ;;
-
-     4) if [ $CountUser2 -eq 99 ] || [ $CountUser2 -eq 98 ] || [ $CountUser2 -eq 97 ]
-	then
-	return
-	else
-	CountUser2=$(($CountUser2+4))
-        return $CountUser2
-	fi
-        ;;
-
-      5)if [ $CountUser2 -eq 99 ] || [ $CountUser2 -eq 98 ] || [ $CountUser2 -eq 97 ] || [ $CountUser2 -eq 96 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2+5))
-        return $CountUser2
-	fi
-        ;;
-
-      6)if [ $CountUser2 -eq 99 ] || [ $CountUser2 -eq 98 ] || [ $CountUser2 -eq 97 ] || [ $CountUser2 -eq 96 ] || [ $CountUser2 -eq 95 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2+6))
-        return $CountUser2
-	fi
-        ;;
-
-   *) echo error
-   esac
-}
 #snake function..........................
 
 Snake(){
-echo
+Count=$1
 # random function calling for rolling die
 random
- a=$?
-echo die value is $a
-#echo enyter into the case
+a=$?
+echo die value is : $a
+#echo enter into the case
    case $a in
-     1) if [ $CountUser -eq 0 ]
+     1) if [ $Count -eq 0 ]
 	then
-	return $CountUser
+	return $Count
 	else
-	CountUser=$(($CountUser-1))
-        return $CountUser
+	Count=$(($Count-1))
+        return $Count
 	fi
         ;;
 
-     2) if [ $CountUser -eq 1 ] || [ $CountUser -eq 0 ]
+     2) if [ $Count -eq 1 ] || [ $Count -eq 0 ]
 	then
-         return $CountUser
+        return $Count
 	else
-	CountUser=$(($CountUser-2))
-        return $CountUser
-	fi
-        ;;
-     3) if [ $CountUser -eq 1 ] || [ $CountUser -eq 2 ] || [ $CountUser -eq 0 ]
-	then
-	return $CountUser
-	else
-	CountUser=$(($CountUser-3))
-        return $CountUser
+	Count=$(($Count-2))
+        return $Count
 	fi
         ;;
 
-     4) if [ $CountUser -eq 1 ] || [ $CountUser -eq 2 ] || [ $CountUser -eq 3 ] || [ $CountUser -eq 0 ]
+     3) if [ $Count -eq 1 ] || [ $Count -eq 2 ] || [ $Count -eq 0 ]
 	then
-        return $CountUser
+	return $Count
 	else
-	CountUser=$(($CountUser-4))
-        return $CountUser
+	Count=$(($Count-3))
+        return $Count
 	fi
         ;;
 
-      5)if [ $CountUser -eq 1 ] || [ $CountUser -eq 2 ] || [ $CountUser -eq 3 ] || [ $CountUser -eq 3 ] || [ $CountUser -eq 0 ]
+     4) if [ $Count -eq 1 ] || [ $Count -eq 2 ] || [ $Count -eq 3 ] || [ $Count -eq 0 ]
 	then
-	return $CountUser
+        return $Count
 	else
-	CountUser=$(($CountUser-5))
-        return $CountUser
+	Count=$(($Count-4))
+        return $Count
 	fi
         ;;
 
-      6)if [ $CountUser -eq 1 ] || [ $CountUser -eq 2 ] || [ $CountUser -eq 3 ] || [ $CountUser -eq 3 ] || [ $CountUser -eq 5 ] || [ $CountUser -eq 0 ]
+      5)if [ $Count -eq 1 ] || [ $Count -eq 2 ] || [ $Count -eq 3 ] || [ $Count -eq 3 ] || [ $Count -eq 0 ]
 	then
-	return $CountUser
+	return $Count
 	else
-	CountUser=$(($CountUser-6))
-        return $CountUser
+	Count=$(($Count-5))
+        return $Count
 	fi
         ;;
 
-   *) echo error
+      6)if [ $Count -eq 1 ] || [ $Count -eq 2 ] || [ $Count -eq 3 ] || [ $Count -eq 3 ] || [ $Count -eq 5 ] || [ $Count -eq 0 ]
+	then
+	return $Count
+	else
+	Count=$(($Count-6))
+        return $Count
+	fi
+        ;;
+
+     *) echo error
    esac
 
 }
 
-# snake function for user 2...........................................................................
-Snake2(){
-echo
-# random function calling for rolling die
-random
- a=$?
-echo die value is $a
-#echo enyter into the case
-   case $a in
-     1) if [ $CountUser2 -eq 0 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2-1))
-        return $CountUser2
-	fi
-        ;;
-
-     2) if [ $CountUser2 -eq 1 ] || [ $CountUser2 -eq 0 ]
-	then
-        return $CountUser2
-	else
-	CountUser2=$(($CountUser2-2))
-        return $CountUser2
-	fi
-        ;;
-
-     3) if [ $CountUser2 -eq 1 ] || [ $CountUser2 -eq 2 ] || [ $CountUser2 -eq 0 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2-3))
-        return $CountUser2
-	fi
-        ;;
-
-     4) if [ $CountUser2 -eq 1 ] || [ $CountUser2 -eq 2 ] || [ $CountUser2 -eq 3 ] || [ $CountUser2 -eq 0 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2-4))
-        return $CountUser2
-	fi
-        ;;
-
-      5)if [ $CountUser2 -eq 1 ] || [ $CountUser2 -eq 2 ] || [ $CountUser2 -eq 3 ] || [ $CountUser2 -eq 3 ] || [ $CountUser2 -eq 0 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2-5))
-        return $CountUser2
-	fi
-        ;;
-
-      6)if [ $CountUser2 -eq 1 ] || [ $CountUser2 -eq 2 ] || [ $CountUser2 -eq 3 ] || [ $CountUser2 -eq 3 ] || [ $CountUser2 -eq 5 ] || [ $CountUser2 -eq 0 ]
-	then
-	return $CountUser2
-	else
-	CountUser2=$(($CountUser2-6))
-        return $CountUser2
-	fi
-        ;;
-
-   *) echo error
-   esac
-
-}
-
-
-
-#_________________________________
-
-#main function
-#this count variable is for no of total time die was played
-count=0
+#first user method.......................................
 userTurn(){
-echo press 1 for No play
-echo press 2 for move forward
-echo press 3 for move backward
- move=$(($RANDOM%3+1))
-echo
-case $move in
 
-1)   echo $CountUser
-   ;;
+#this random no is for Checking the option of play no play and ladder and snake
 
-2) Ladder $CountUser
-  
-  echo $CountUser
-   ;;
+move=$(($RANDOM%3+1))
+echo option check for user 1 is :$move
 
-3) Snake $CountUser
-   echo $CountUser
-   ;;
-esac
-count=$(($count+1))
+#cash of ching option is start from here
+  case $move in
+    1) echo "position : $PositionOf1stUser"
+       ;;
+
+    2) Ladder $PositionOf1stUser
+       PositionOf1stUser=$?
+       echo "position : $PositionOf1stUser"
+       ;;
+
+    3) Snake $PositionOf1stUser
+       PositionOf1stUser=$?
+       echo "position : $PositionOf1stUser"
+       ;;
+
+    *)echo error
+  esac
+  count=$(($count+1))
 
 }
+
 #user 2 function..........................................
-CountUser2=0
-count2=0
+
 userTurn2(){
 move=$(($RANDOM%3+1))
-echo press 1 for No play
-echo press 2 for move forward
-echo press 3 for move backward
+echo option for 2nd user is : $move
 
+#case is starting for here
+  case $move in
+   1) echo "position : $PositionOf2ndUser"
+      ;;
 
+   2) Ladder $PositionOf2ndUser
+      PositionOf2ndUser=$?
+      echo "position : $PositionOf2ndUser"
+      ;;
 
-case $move in
+   3) Snake $PositionOf2ndUser
+      PositionOf2ndUser=$?
+      echo "position : $PositionOf2ndUser"
+      ;;
 
-1) echo $CountUser2
-   ;;
-
-2) Ladder2 $CountUser2
-    echo $CountUser2
-   ;;
-
-3) Snake2 $CountUser2
-   echo $CountUser2
-   ;;
-esac
-count2=$(($count2+1))
+    *)echo error
+  esac
+  count2=$(($count2+1))
 
 }
-# win methos
-win(){
-    if [ $CountUser2 -eq 100 ] || [ $CountUser -eq 100 ]
+
+# win methos.............................................................
+  win(){
+
+    if [ $PositionOf2ndUser -eq 100 ] || [ $PositionOf1stUser -eq 100 ]
     then
     echo result_________________________________________________________
     echo
-    echo $CountUser 1st user score
-    echo $CountUser2 2nd player score
-    if(($CountUser2==100))
-    then
-    echo user 2 wins
-    fi
-if(($CountUser==100))
-then
-echo user 1 wins
-fi
-    exit 0
-    fi
+    echo User one score : $PositionOf1stUser 
+    echo User two score : $PositionOf2ndUser 
+    
+        if(($PositionOf2ndUser==100))
+        then
+        echo user 2 wins
+        fi
 
+        if(($PositionOf1stUser==100))
+        then
+        echo user 1 wins
+        fi
 
+       exit 
+    fi
 }
-#my main function from where program is starting...................................................
 
-ee=1
-while((ee!=0))
+#my main function from where program is starting...................................................
+#this count variable is for no of total time die was played
+count=0
+count2=0
+PositionOf1stUser=0
+PositionOf2ndUser=0
+loop=1
+while(($loop!=0))
 do
+echo -----------
 echo user 1 turn
 echo -----------
+#calling the user 1 method
+    userTurn
+#is user 1 is win?
+    win
 
-userTurn
-win
-
-echo -----------
+echo ------------
 echo user 2 turn
 echo ------------
-userTurn2
-win
+#calling user 2 method
+    userTurn2
+#is user 2 win?
+    win
 echo
 done
-echo total number of times the dice was played to win the game is : $count
+#echo total number of times the dice was played by user 1 to win the game is : $count
+#echo total number of times the dice was played by user 1 to win the game is : $count2
 
 
