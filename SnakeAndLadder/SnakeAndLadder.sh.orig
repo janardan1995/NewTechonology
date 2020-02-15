@@ -9,7 +9,7 @@ random(){
 return $x
 }
 
-
+<<<<<<< HEAD
 #THIS is for checking an option randomly
 move=$(($RANDOM%3+1))
 
@@ -20,6 +20,9 @@ echo press 3 for move backward
 random
 die=$?
 case $move in 
+=======
+
+###########
 CountUser=0
 Ladder(){
 echo
@@ -27,7 +30,7 @@ echo
 random
  a=$?
 echo die value is $a
-
+#echo enyter into the case
    case $a in
      1) CountUser=$(($CountUser+1))
 	echo 
@@ -186,6 +189,8 @@ read move
 
 
 case $move in
+>>>>>>> uc-5
+
 while (($CountUser!=100))
 do
 random
@@ -198,6 +203,14 @@ case $move in
 1) echo ..........$CountUser
    ;;
 
+<<<<<<< HEAD
+2)  CountUser=$(($CountUser+$die))
+   echo .......... $CountUser
+   ;;
+
+3) CountUser=$(($(($CountUser))-$(($die))))
+   echo .........$CountUser
+=======
 2) Ladder $CountUser
   echo .. $?
   echo $CountUser
@@ -205,7 +218,7 @@ case $move in
 
 3) Snake $CountUser
    echo $CountUser
-
+>>>>>>> uc-5
    ;;
 
  *) echo error
