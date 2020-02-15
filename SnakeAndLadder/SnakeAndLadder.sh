@@ -7,12 +7,13 @@ random(){
  x=$(($(($RANDOM%6))+1))
 return $x
 }
+
+#THIS is for checking an option randomly
+move=$(($RANDOM%3+1))
+
 echo press 1 for No play
 echo press 2 for move forward
 echo press 3 for move backward
-read move
-random
-die=$?
 case $move in 
 
 1) echo $CountUser
