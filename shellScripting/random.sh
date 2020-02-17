@@ -1,2 +1,0 @@
-a=$RANDOM
-echo "$a"
