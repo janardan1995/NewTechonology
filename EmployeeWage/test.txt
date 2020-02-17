@@ -1,21 +1,47 @@
-140 for day 1
-0 for day 2
-0 for day 3
-0 for day 4
-200 for day 5
-0 for day 6
-140 for day 7
-140 for day 8
-140 for day 9
-200 for day 10
-0 for day 11
-140 for day 12
-0 for day 13
-140 for day 14
-0 for day 15
-0 for day 16
-200 for day 17
-140 for day 18
-200 for day 19
-0 for day 20
-total wages is 4980
+
+store the employee details
+Day 1 : wage is : 200
+Day 2 : wage is : 0
+Day 3 : wage is : 0
+Day 4 : wage is : 0
+Day 5 : wage is : 0
+Day 6 : wage is : 140
+Day 7 : wage is : 200
+Day 8 : wage is : 140
+Day 9 : wage is : 140
+Day 10 : wage is : 200
+Day 11 : wage is : 0
+Day 12 : wage is : 0
+Day 13 : wage is : 140
+Day 14 : wage is : 140
+Day 15 : wage is : 140
+Day 16 : wage is : 0
+Day 17 : wage is : 200
+Day 18 : wage is : 200
+Day 19 : wage is : 200
+Day 20 : wage is : 140
+total wages is 5380
+
+store the employee details
+Day 1 : wage is : 140
+Day 2 : wage is : 200
+Day 3 : wage is : 0
+Day 4 : wage is : 200
+Day 5 : wage is : 200
+Day 6 : wage is : 200
+Day 7 : wage is : 0
+Day 8 : wage is : 200
+Day 9 : wage is : 0
+Day 10 : wage is : 0
+Day 11 : wage is : 200
+Day 12 : wage is : 200
+Day 13 : wage is : 200
+Day 14 : wage is : 0
+Day 15 : wage is : 0
+Day 16 : wage is : 0
+Day 17 : wage is : 200
+Day 18 : wage is : 200
+Day 19 : wage is : 0
+Day 20 : wage is : 0
+total wages is 5340
+

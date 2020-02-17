@@ -14,6 +14,7 @@ fi
 
 
 echo "Welcome to Employee Wage Computation Program"
+echo "store the employee details" >> test.txt
 count=0
 # if  calculiting 20 working day and total hour that employee works less then 100
 count=1
@@ -43,18 +44,18 @@ case $y in
         wage=$(($wage+$((20*10))))
 	FullTimewage=$((20*10))
         DailyWage=$(($DailyWage+1))
-        echo $FullTimewage for day $DailyWage >> test.txt
+        echo Day $DailyWage : wage is : $FullTimewage  >> test.txt
         totalworkHour 4
-
+	totalhour=$?
 ;;
 
 2) echo "he wanna work part time for 4 hours per day"
        wage=$(($wage+$((20*7))))
        PartTimewage=$((20*7))
        DailyWage=$(($DailyWage+1))
-       echo $PartTimewage for day $DailyWage >> test.txt 
+       echo "Day $DailyWage : wage is : $PartTimewage" >> test.txt 
        totalworkHour 8
-
+	totalhour $?
 ;;
 
 *) echo invalid input
@@ -62,7 +63,7 @@ esac
 else
  echo he is absent
   DailyWage=$(($DailyWage+1))
-  echo 0 for day $DailyWage >> test.txt
+  echo Day $DailyWage : wage is : 0   >> test.txt
 fi
  echo $count
  wage=$(($wage+$((20*8))))
@@ -70,6 +71,6 @@ fi
  count=$(($count+1))
  done
 
- totalworkHour 0
  echo total wages is $wage >> test.txt
-echo total working hour $?
+echo total working hour $totalhour
+echo >> test.txt
