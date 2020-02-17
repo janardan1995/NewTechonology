@@ -1,5 +1,8 @@
 #!/bin/bash/ -x
 echo "welcome to address registration"
+echo "adding name to the registration book" >> test1.txt
+echo ..................................... >> test1.txt
+echo
 
 #first name and lastname method
 name(){
@@ -68,22 +71,30 @@ then
                 if [ $? -eq 0 ]
                 then
                     echo "$password" | grep -q [a-z]
-                      if test $? -eq 0 ; then
-                       echo "Strong password"
-		       echo $password >> test1.txt
-                   else
-                       echo "weak password include lower case char"
+                      if [ $? -eq 0 ]
+                      then
+                         echo "$password" | grep -q "[@#$%^&*]"
+                           if [ $? -eq 0 ]
+                           then
+                              echo "strong password"
+		              echo $password >> test1.txt
+                           else
+                               echo "special character is not included"
 password
-                   fi
+                            fi
+                      else
+                          echo "weak password include lower case char"
+password
+                      fi
+                 else
+                 echo "weak password include capital char"
+password
+                 fi
             else
-               echo "weak password include capital char"
-password
-            fi
-     else
        echo "please include the numbers in password it is weak password"
 password
 
-     fi
+            fi
 else
     echo "password lenght should be greater than or equal 8 hence weak password"
 password
@@ -115,3 +126,4 @@ password
 
 employ_address
 
+echo >> test1.txt
