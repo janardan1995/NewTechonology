@@ -46,3 +46,4 @@ Day 20 : wage is : 0
 total wages is 5340
 
 store the employee details
+store the employee details
