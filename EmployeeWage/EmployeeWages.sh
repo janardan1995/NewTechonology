@@ -7,7 +7,7 @@ then
 hour=$(($hour+$1))
 return $hour
 else
-echo wow $hour
+echo  $hour
 fi
 }
 echo "Welcome to Employee Wage Computation Program"
@@ -15,8 +15,8 @@ echo "Welcome to Employee Wage Computation Program"
 # if  calculiting 20 working day and total hour that employee works less then 100
 count=1
 workDay=20
-extra=0
-while(($workDay!=0))
+hour=0
+while [ $workDay != 0 ] && [ $hour -le 100 ]
 do
 x=$(($RANDOM%2))
 echo $x
@@ -33,24 +33,29 @@ case $y in
 1) echo "he wanna work full time"
         FullTimewage=$(($FullTimewage+$((20*8))))
 ;;
+
 #if he wanna do part time work
 #assuming that part time hour is 4 hour as full time is 8
-2) echo "if he wanna do part time"
-      PartTimeIncome=$(($PartTimeIncome+$((4 * 20))))
+2) echo "he wanna work part time for 4 hours per day"
+       wage=$(($wage+$((20*4))))
+       PartTimewage=$((20*4))
+       DailyWage=$(($DailyWage+1))
+       echo $PartTimewage  >> test.txt
+       totalworkHour 8
+
 ;;
 *) echo "error"
 esac
 else
-echo he is absent
+ echo he is absent
+ echo 0  >> test.txt
 fi
  echo $count
  wage=$(($wage+$((20*8))))
  workDay=$(($workDay-1))
  count=$(($count+1))
  done
- echo full time wage :$FullTimewage
- echo PartTimewage :$PartTimewage
- echo total wages : $wage
-totalworkHour 0
+ totalworkHour 0
+ echo total wages is $wage >> test.txt
 
 
