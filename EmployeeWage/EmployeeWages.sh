@@ -1,6 +1,15 @@
 #!/bin/bash/ -x
 echo "welcome to Employwages program"
-x=$(($RANDOM%2))
+totalworkHour()
+{
+if(($1!=0))
+then
+hour=$(($hour+$1))
+return $hour
+else
+echo wow $hour
+fi
+}
 echo "Welcome to Employee Wage Computation Program"
 
 # if  calculiting 20 working day and total hour that employee works less then 100
@@ -34,7 +43,14 @@ esac
 else
 echo he is absent
 fi
-workDay=$(($workDay-1))
-done
-echo full time wage :$FullTimewage
-echo PartTimewage :$PartTimeIncome
+ echo $count
+ wage=$(($wage+$((20*8))))
+ workDay=$(($workDay-1))
+ count=$(($count+1))
+ done
+ echo full time wage :$FullTimewage
+ echo PartTimewage :$PartTimewage
+ echo total wages : $wage
+totalworkHour 0
+
+
