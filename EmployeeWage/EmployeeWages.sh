@@ -1,4 +1,3 @@
-
 echo for full time press 1
 echo for part time press 2
 case $x in
