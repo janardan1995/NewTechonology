@@ -9,14 +9,11 @@ else
 echo total hours employee work in that month: $hour
 fi
 }
-
-
 echo "Welcome to Employee Wage Computation Program"
 count=0
 # if  calculiting 20 working day and total hour that employee works less then 100
 count=1
 workDay=20
-
 hour=0
 while [ $workDay != 0 ] && [ $hour -le 100 ]
 do
@@ -42,7 +39,7 @@ case $y in
        wage=$(($wage+$((20*4))))
        PartTimewage=$((20*4))
        DailyWage=$(($DailyWage+1))
-       echo $PartTimewage  >> test.txt 
+       echo $PartTimewage  >> test.txt
        totalworkHour 8
 
 ;;
@@ -51,16 +48,13 @@ case $y in
 esac
 else
  echo he is absent
-  
-  echo 0  >> test.txt 
+ echo 0  >> test.txt
 fi
  echo $count
  wage=$(($wage+$((20*8))))
  workDay=$(($workDay-1))
  count=$(($count+1))
  done
- 
- 
  totalworkHour 0
  echo total wages is $wage >> test.txt
 
