@@ -1,5 +1,3 @@
-
-#!/bin/bash/ -x
 totalworkHour()
 {
 if(($1!=0))
@@ -10,7 +8,6 @@ else
 echo wow $hour
 fi
 }
-
 echo "Welcome to Employee Wage Computation Program"
 count=0
 # if  calculiting 20 working day and total hour that employee works less then 100
@@ -51,5 +48,5 @@ fi
  echo full time wage :$FullTimewage
  echo PartTimewage :$PartTimewage
  echo total wages : $wage
- totalworkHour 0
+totalworkHour 0
 
