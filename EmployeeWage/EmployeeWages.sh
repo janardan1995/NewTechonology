@@ -2,7 +2,9 @@
 echo "welcome to Employwages program"
 x=$(($RANDOM%2))
 echo "Welcome to Employee Wage Computation Program"
-count=0
+
+# if  calculiting 20 working day and total hour that employee works less then 100
+count=1
 workDay=20
 extra=0
 while(($workDay!=0))
@@ -26,7 +28,6 @@ case $y in
 #assuming that part time hour is 4 hour as full time is 8
 2) echo "if he wanna do part time"
       PartTimeIncome=$(($PartTimeIncome+$((4 * 20))))
-   
 ;;
 *) echo "error"
 esac
