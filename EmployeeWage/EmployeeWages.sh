@@ -1,4 +1,3 @@
-
 # if  calculiting 20 working day and total hour that employee works less then 100
 count=1
 workDay=20
