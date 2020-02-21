@@ -1,14 +1,22 @@
-0
-0
-0
-0
-0
-80
-80
-0
-0
-0
-0
-80
-0
-total wages is 3440
+Welcome to Employee Wage Computation Program
+0 is per day wages for day 1
+160 is per day wages for day 2
+160 is per day wages for day 3
+0 is per day wages for day 4
+80 is per day wages for day 5
+160 is per day wages for day 6
+0 is per day wages for day 7
+80 is per day wages for day 8
+0 is per day wages for day 9
+0 is per day wages for day 10
+160 is per day wages for day 11
+0 is per day wages for day 12
+80 is per day wages for day 13
+160 is per day wages for day 14
+80 is per day wages for day 15
+160 is per day wages for day 16
+0 is per day wages for day 17
+80 is per day wages for day 18
+160 is per day wages for day 19
+80 is per day wages for day 20
+total wages is 4800
